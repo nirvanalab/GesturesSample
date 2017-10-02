@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GestureTutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Crocodile" id="UBp-Ua-onY">
+                                <rect key="frame" x="50" y="192" width="274" height="205"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="STU-wi-bcP" appends="YES" id="T8T-Sf-J3a"/>
+                                    <outletCollection property="gestureRecognizers" destination="ctc-mh-QZD" appends="YES" id="nay-mx-rC2"/>
+                                    <outletCollection property="gestureRecognizers" destination="b7c-xX-Suo" appends="YES" id="cIU-7K-LtZ"/>
+                                    <outletCollection property="gestureRecognizers" destination="gLi-bW-Odn" appends="YES" id="kJe-K3-YBz"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="EWn-57-btA" appends="YES" id="VB2-wN-dq4"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="UBp-Ua-onY" id="oGk-BG-1CX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="STU-wi-bcP">
+                    <connections>
+                        <action selector="handlePinch:" destination="BYZ-38-t0r" id="u12-bE-9Ym"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="ctc-mh-QZD">
+                    <connections>
+                        <action selector="handleRotation:" destination="BYZ-38-t0r" id="7ai-Hl-iO7"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="EWn-57-btA">
+                    <connections>
+                        <action selector="handleSwipe:" destination="BYZ-38-t0r" id="IFf-13-o2s"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="b7c-xX-Suo">
+                    <connections>
+                        <action selector="handleLongPress:" destination="BYZ-38-t0r" id="1pf-9g-PkT"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="gLi-bW-Odn">
+                    <connections>
+                        <action selector="handlePan:" destination="BYZ-38-t0r" id="cNH-ky-gyN"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-518" y="23"/>
+        </scene>
+        <!--Screen Edge View Controller-->
+        <scene sceneID="lTn-RK-0Yi">
+            <objects>
+                <viewController id="6FZ-0f-udq" customClass="ScreenEdgeViewController" customModule="GestureTutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pZP-ax-A47">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" id="KhF-4D-vh5">
+                                <rect key="frame" x="0.0" y="69" width="142" height="479"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" misplaced="YES" id="Ink-yf-Jm5">
+                                        <rect key="frame" x="34" y="29" width="75" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" misplaced="YES" id="wcl-sv-mue">
+                                        <rect key="frame" x="34" y="135" width="75" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" misplaced="YES" id="1ia-2x-HJh">
+                                        <rect key="frame" x="34" y="254" width="75" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" misplaced="YES" id="bSA-B3-pDs">
+                                                <rect key="frame" x="0.0" y="119" width="75" height="75"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.37878236729999998" green="0.46322397380000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="hRc-hp-bK0" appends="YES" id="SI3-QZ-NBd"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="MoI-T9-jXu" appends="YES" id="evm-zT-ivG"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="sideView" destination="KhF-4D-vh5" id="kkv-9T-NDl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FPT-50-16a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="MoI-T9-jXu">
+                    <rectEdge key="edges" bottom="YES"/>
+                    <connections>
+                        <action selector="handleScreenEdge:" destination="6FZ-0f-udq" id="MiU-OD-QBQ"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="hRc-hp-bK0">
+                    <connections>
+                        <action selector="handleSwipeLeft:" destination="6FZ-0f-udq" id="Gd3-Kq-zuR"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="389" y="148"/>
+        </scene>
+        <!--Shake Gesture View Controller-->
+        <scene sceneID="ZL8-Jx-mnv">
+            <objects>
+                <viewController id="dqf-OU-ZlX" customClass="ShakeGestureViewController" customModule="GestureTutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mnf-fS-6m3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Shake Me!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zAD-92-GQW">
+                                <rect key="frame" x="70" y="296" width="235" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9Fk-4u-Mn4">
+                                <rect key="frame" x="140" y="44" width="94" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="onReset:" destination="dqf-OU-ZlX" eventType="touchUpInside" id="QXT-eN-jQI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="shakeLabel" destination="zAD-92-GQW" id="a55-10-pES"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IrX-36-ho7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="939.5" y="147.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Crocodile" width="960" height="540"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>
